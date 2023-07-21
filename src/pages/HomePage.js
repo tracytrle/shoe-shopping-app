@@ -42,6 +42,7 @@ function HomePage() {
       }
       setLoading(false);
     };
+
     getProducts();
   }, []);
 
@@ -102,6 +103,7 @@ function applyFilter(products, filters) {
   }
 
   // FILTER PRODUCTS
+  console.log("filters.gender.length: ", filters.gender.length); //
   if (filters.gender.length > 0) {
     filteredProducts = products.filter((product) =>
       filters.gender.includes(product.gender)

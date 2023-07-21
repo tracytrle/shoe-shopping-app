@@ -66,7 +66,9 @@ function ProductFilter({ resetFilter }) {
           type="submit"
           color="inherit"
           variant="outlined"
-          onClick={resetFilter}
+          onClick={() => {
+            resetFilter();
+          }}
           startIcon={<ClearAllIcon />}
         >
           Clear All
